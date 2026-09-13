@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"Script_player_walk",
+  "%Name":"Script_enemy_walk",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Script_player_walk",
+  "name":"Script_enemy_walk",
   "parent":{
-    "name":"player_scripts",
-    "path":"folders/Scripts/player_scripts.yy",
+    "name":"enemy_scripts",
+    "path":"folders/Scripts/enemy_scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
