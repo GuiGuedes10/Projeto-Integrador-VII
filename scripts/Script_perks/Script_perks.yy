@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Script_perks",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Script_perks",
+  "parent":{
+    "name":"game_scripts",
+    "path":"folders/Scripts/game_scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

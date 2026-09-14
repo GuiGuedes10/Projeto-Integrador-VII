@@ -5,10 +5,10 @@ dead
 }
 
 currently_state = state.idle;
-player_speed = 4;
-life = 1000;
-max_life = 1000;
-level = 0;
+player_speed = 3;
+life = 500;
+max_life = 500;
+level = 1;
 xp = 0;
 attack_cooldown = 0;
 

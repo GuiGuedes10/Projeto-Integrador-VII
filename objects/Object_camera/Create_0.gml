@@ -12,3 +12,6 @@ view_set_camera(0, camera);
 
 window_set_size(cam_width * 1.5, cam_height * 1.5);
 surface_resize(application_surface, cam_width * 1.5, cam_height * 1.5);
+
+shake_intensity = 0;
+shake_duration = 0;
