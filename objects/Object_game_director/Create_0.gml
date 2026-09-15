@@ -3,7 +3,7 @@ alpha = 0.1;   // Learning Rate
 gamma = 0.9;   // Discount Factor
 epsilon = 0.15; // 15% de chance de testar algo novo, 85% de foco na melhor estratégia
 
-max_enemies = 60; 
+max_enemies = 100; 
 
 q_table = {};
 last_state = "";

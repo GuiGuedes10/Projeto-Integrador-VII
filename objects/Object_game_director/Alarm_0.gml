@@ -116,25 +116,52 @@ if (_enemy_count + _spawn_amount > max_enemies) {
 
 var _base_direction = random(360); 
 
+var _cam_x = camera_get_view_x(view_camera[0]);
+var _cam_y = camera_get_view_y(view_camera[0]);
+
+var _cam_w = 960;
+var _cam_h = 540;
+var _margin = 80;
+
 repeat (_spawn_amount) {
-    var _dir = 0;
-    var _dist = 0;
+    var _spawn_x = 0;
+    var _spawn_y = 0;
     
     if (_formation == "CERCO") {
-        _dir = random(360);
-        _dist = random_range(400, 600);
+        var _side = choose("LEFT", "RIGHT", "TOP", "BOTTOM");
+        
+        switch (_side) {
+            case "LEFT":
+                _spawn_x = _cam_x - _margin;
+                _spawn_y = random_range(_cam_y - _margin, _cam_y + _cam_h + _margin);
+                break;
+                
+            case "RIGHT":
+                _spawn_x = _cam_x + _cam_w + _margin;
+                _spawn_y = random_range(_cam_y - _margin, _cam_y + _cam_h + _margin);
+                break;
+                
+            case "TOP":
+                _spawn_x = random_range(_cam_x - _margin, _cam_x + _cam_w + _margin);
+                _spawn_y = _cam_y - _margin;
+                break;
+                
+            case "BOTTOM":
+                _spawn_x = random_range(_cam_x - _margin, _cam_x + _cam_w + _margin);
+                _spawn_y = _cam_y + _cam_h + _margin;
+                break;
+        }
     } 
-    else if (_formation == "FRENTE") {
-        _dir = _base_direction + random_range(-45, 45);
-        _dist = random_range(350, 500);
-    } 
-    else if (_formation == "MISTO") {
-        _dir = random(360);
-        _dist = choose(200, 450, 650);
+    else if (_formation == "FRENTE" || _formation == "MISTO") {
+        var _dir = (_formation == "FRENTE") ? (_base_direction + random_range(-30, 30)) : random(360);
+        var _dist = random_range(600, 850); 
+        
+        _spawn_x = Object_player.x + lengthdir_x(_dist, _dir);
+        _spawn_y = Object_player.y + lengthdir_y(_dist, _dir);
     }
     
-    var _spawn_x = clamp(Object_player.x + lengthdir_x(_dist, _dir), 64, room_width - 64);
-    var _spawn_y = clamp(Object_player.y + lengthdir_y(_dist, _dir), 64, room_height - 64);
+    _spawn_x = clamp(_spawn_x, 64, room_width - 64);
+    _spawn_y = clamp(_spawn_y, 64, room_height - 64);
     
     var _inst = instance_create_layer(_spawn_x, _spawn_y, "Instances", Object_enemy);
     _inst.life_max = _enemy_hp;
