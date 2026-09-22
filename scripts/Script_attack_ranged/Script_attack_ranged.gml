@@ -1,4 +1,4 @@
-function Script_attack() {
+function Script_attack_ranged() {
     if (attack_cooldown > 0) {
         attack_cooldown--;
     }

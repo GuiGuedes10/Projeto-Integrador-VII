@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Script_attack_ranged",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Script_attack_ranged",
+  "parent":{
+    "name":"player_scripts",
+    "path":"folders/Scripts/player_scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

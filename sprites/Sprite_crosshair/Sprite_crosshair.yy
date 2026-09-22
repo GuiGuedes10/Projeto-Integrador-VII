@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"game",
-    "path":"folders/Sprites/game.yy",
+    "name":"crosshair_",
+    "path":"folders/Sprites/game/crosshair_.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

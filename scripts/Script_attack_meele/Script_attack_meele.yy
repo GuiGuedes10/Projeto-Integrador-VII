@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"Script_attack",
+  "%Name":"Script_attack_meele",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Script_attack",
+  "name":"Script_attack_meele",
   "parent":{
     "name":"player_scripts",
     "path":"folders/Scripts/player_scripts.yy",

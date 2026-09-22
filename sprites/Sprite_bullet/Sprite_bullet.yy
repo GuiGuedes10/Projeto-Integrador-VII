@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"game",
-    "path":"folders/Sprites/game.yy",
+    "name":"player_attack_",
+    "path":"folders/Sprites/game/player_attack_.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

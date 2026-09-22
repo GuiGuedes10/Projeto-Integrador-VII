@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"game",
-    "path":"folders/Sprites/game.yy",
+    "name":"hud_",
+    "path":"folders/Sprites/game/hud_.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
