@@ -3,6 +3,10 @@ if (global.game_paused || !instance_exists(Object_player)) {
     exit;
 }
 
+if (instance_exists(Object_player) && Object_player.life > 0) {
+    global.frames_survived++;
+}
+
 var _current_hp = Object_player.life;
 var _hp_percent = _current_hp / Object_player.max_life;
 var _state_hp = (_hp_percent > 0.7) ? "HIGH" : ((_hp_percent > 0.3) ? "MED" : "LOW");
@@ -10,7 +14,13 @@ var _state_hp = (_hp_percent > 0.7) ? "HIGH" : ((_hp_percent > 0.3) ? "MED" : "L
 var _enemy_count = instance_number(Object_enemy);
 var _state_enemies = (_enemy_count >= max_enemies) ? "FULL" : ((_enemy_count > 15) ? "HIGH" : ((_enemy_count > 5) ? "MED" : "LOW"));
 
-var _current_state = "HP_" + _state_hp + "_ENEMIES_" + _state_enemies;
+var _player_type = "MELEE"; 
+
+if (Object_player.object_index != Object_player_meele) {
+    _player_type = "RANGED"; 
+}
+
+var _current_state = "WPN_" + _player_type + "_HP_" + _state_hp + "_ENEMIES_" + _state_enemies;
 
 if (!variable_struct_exists(q_table, _current_state)) {
     variable_struct_set(q_table, _current_state, [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]);

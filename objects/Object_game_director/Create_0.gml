@@ -1,14 +1,28 @@
-// Hiperparâmetros do Q-Learning
-alpha = 0.1;   // Learning Rate
-gamma = 0.9;   // Discount Factor
-epsilon = 0.15; // 15% de chance de testar algo novo, 85% de foco na melhor estratégia
+if (!variable_global_exists("ai_q_table")) {
+    global.ai_q_table = {}; 
+}
 
-max_enemies = 100; 
+q_table = global.ai_q_table;
 
-q_table = {};
 last_state = "";
-last_action = -1;
+last_action = 0;
 
-last_player_hp = (instance_exists(Object_player)) ? Object_player.life : 100;
+if (instance_exists(Object_player)) {
+    last_player_hp = Object_player.life;
+} else {
+    last_player_hp = 500; 
+}
 
-alarm[0] = 60 * 3; 
+alpha = 0.1;
+gamma = 0.9;
+epsilon = 0.2; 
+max_enemies = 30; 
+
+global.frames_survived = 0;
+global.bot_mode = "DESLIGADO"; 
+
+if (global.bot_mode != "DESLIGADO") {
+    game_set_speed(600, gamespeed_fps);
+}
+
+alarm[0] = 60 * 3;

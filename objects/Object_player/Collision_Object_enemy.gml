@@ -5,8 +5,11 @@ knockback_y = lengthdir_y(_impact_force, _dir);
 
 life -= other.strength;
 
-if (life <= max_life * 0.8) {
-    Script_screenshake(8, 15);
-} else {
-    Script_screenshake(20, 30);
+if(currently_state != state.dead){
+	if (life <= max_life * 0.8) {
+		Script_screenshake(8, 15);
+	} else {
+	    Script_screenshake(20, 30);
+	}
 }
+

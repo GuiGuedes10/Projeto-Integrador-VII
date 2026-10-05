@@ -3,7 +3,7 @@ function Script_attack_meele() {
         attack_cooldown--;
     }
 
-    if (attack_cooldown <= 0 && mouse_check_button_pressed(mb_left)) {
+    if (attack_cooldown <= 0 && Object_input.input_mb_left) {
         var _dir = point_direction(x, y, mouse_x, mouse_y);
         
         var _dist = 24; 
@@ -17,7 +17,8 @@ function Script_attack_meele() {
         _slash.dist_offset = _dist;
         _slash.direction = _dir;
         _slash.image_angle = _dir;
-        _slash.image_xscale = -1;
+		_slash.image_xscale = global.slash_range * -1
+		_slash.image_yscale = global.slash_range 
         
         attack_cooldown = 15; 
     }

@@ -8,20 +8,6 @@ function Script_player_walk(){
         var _hspd = lengthdir_x(player_speed, _dir);
         var _vspd = lengthdir_y(player_speed, _dir);
         
-        if (place_meeting(x + _hspd, y, Object_collision_square)) {
-            while (!place_meeting(x + sign(_hspd), y, Object_collision_square)) {
-                x += sign(_hspd);
-            }
-            _hspd = 0; 
-        }
-        x += _hspd; 
-        
-        if (place_meeting(x, y + _vspd, Object_collision_square)) {
-            while (!place_meeting(x, y + sign(_vspd), Object_collision_square)) {
-                y += sign(_vspd);
-            }
-            _vspd = 0;
-        }
-        y += _vspd; 
+        Script_colison(_hspd, _vspd, Object_collision_square);
     }
 }
