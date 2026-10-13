@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Script_execute_spawning",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Script_execute_spawning",
+  "parent":{
+    "name":"IA_scripts",
+    "path":"folders/Scripts/game_scripts/IA_scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,12 +1,22 @@
-if (Object_input.input_down) {
-    index_selecionado++;
-    if (index_selecionado >= array_length(opcoes)) index_selecionado = 0;
+if (cooldown > 0) {
+    cooldown--;
 }
 
-if (Object_input.input_top) {
-    index_selecionado--;
-    if (index_selecionado < 0) index_selecionado = array_length(opcoes) - 1;
+if(cooldown == 0){
+	if (Object_input.input_down) {
+	    index_selecionado++;
+	    if (index_selecionado >= array_length(opcoes)) index_selecionado = 0;
+		cooldown = _timer;
+	}
+
+	if (Object_input.input_top) {
+	    index_selecionado--;
+	    if (index_selecionado < 0) index_selecionado = array_length(opcoes) - 1;
+		cooldown = _timer;
+	}
 }
+
+
 
 if (Object_input.input_confirm) {
     global.game_paused = false; 

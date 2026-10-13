@@ -2,14 +2,22 @@ var _cima = Object_input.input_top
 var _baixo = Object_input.input_down
 var _confirma = Object_input.input_confirm
 
-if (_baixo) {
-    index_selecionado++;
-    if (index_selecionado >= array_length(opcoes)) index_selecionado = 0;
+if (cooldown > 0) {
+    cooldown--;
 }
 
-if (_cima) {
-    index_selecionado--;
-    if (index_selecionado < 0) index_selecionado = array_length(opcoes) - 1;
+if(cooldown == 0){
+	if (_baixo) {
+	    index_selecionado++;
+	    if (index_selecionado >= array_length(opcoes)) index_selecionado = 0;
+		cooldown = _timer;
+	}
+
+	if (_cima) {
+	    index_selecionado--;
+	    if (index_selecionado < 0) index_selecionado = array_length(opcoes) - 1;
+		cooldown = _timer;
+	}
 }
 
 if (_confirma) {

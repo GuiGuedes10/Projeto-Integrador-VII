@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Script_choose_action_utility",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Script_choose_action_utility",
+  "parent":{
+    "name":"utility",
+    "path":"folders/Scripts/game_scripts/IA_scripts/utility.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

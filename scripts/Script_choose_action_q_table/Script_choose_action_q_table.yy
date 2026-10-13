@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Script_choose_action_q_table",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Script_choose_action_q_table",
+  "parent":{
+    "name":"q_table",
+    "path":"folders/Scripts/game_scripts/IA_scripts/q_table.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

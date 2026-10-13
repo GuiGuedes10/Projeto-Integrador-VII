@@ -12,7 +12,7 @@ function Script_attack_ranged() {
         _proj.image_angle = _dir;
         _proj.speed = Object_bullet.bullet_speed;
         
-        attack_cooldown = 15;
+        attack_cooldown = Object_player_ranged._cooldown;
         
         bullet_current--; 
         

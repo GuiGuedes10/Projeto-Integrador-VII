@@ -20,6 +20,6 @@ function Script_attack_meele() {
 		_slash.image_xscale = global.slash_range * -1
 		_slash.image_yscale = global.slash_range 
         
-        attack_cooldown = 15; 
+        attack_cooldown = Object_player_meele._cooldown; 
     }
 }

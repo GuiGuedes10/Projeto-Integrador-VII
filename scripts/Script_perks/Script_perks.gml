@@ -34,28 +34,20 @@ function Script_init_perks() {
                global.bullet_damage = global.bullet_damage * 1.1; 
             }
         },
-		{
+{
             title: "Reforjar",
-            description: "Aumente o tamanho da sua espada (la ele kkj)",
+            description: "Aumente o tamanho da espada (la ele kkj)",
             allowed_characters: ["Meele"],
+            condition: function() {
+                return global.slash_range < Object_player_meele.slash_range_max; 
+            },
             effect: function() {
-               global.slash_range += global.slash_range * 1.1; 
+                global.slash_range += global.slash_range * 0.1;
+                
+                if (global.slash_range > Object_player_meele.slash_range_max) {
+                    global.slash_range = Object_player_meele.slash_range_max;
+                }
             }
         }
     ];
-}
-
-function Script_get_available_perks() {
-    var _filtered_perks = [];
-    var _current_char = global.current_character;
-    
-    for (var i = 0; i < array_length(global.perk_list); i++) {
-        var _perk = global.perk_list[i];
-        
-        if (_perk.allowed_characters == "all" || array_contains(_perk.allowed_characters, _current_char)) {
-            array_push(_filtered_perks, _perk);
-        }
-    }
-    
-    return _filtered_perks;
 }

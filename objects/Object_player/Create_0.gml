@@ -11,6 +11,7 @@ max_life = 500;
 level = 1;
 xp = 0;
 attack_cooldown = 0;
+_cooldown = 15;
 
 
 _impact_force = 8; 

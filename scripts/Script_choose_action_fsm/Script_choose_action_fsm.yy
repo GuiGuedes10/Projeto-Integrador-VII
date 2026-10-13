@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Script_choose_action_fsm",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Script_choose_action_fsm",
+  "parent":{
+    "name":"fsm",
+    "path":"folders/Scripts/game_scripts/IA_scripts/fsm.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
