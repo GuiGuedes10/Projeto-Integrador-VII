@@ -11,11 +11,10 @@ function Script_init_perks() {
         },
         {
             title: "Injeção de Adrenalina",
-            description: "+200 de Vida Máxima",
+            description: "+100 de Vida Máxima",
             allowed_characters: ["all"], 
             effect: function() {
-                Object_player.max_life += 200;
-                Object_player.life = Object_player.max_life;
+                Object_player.max_life += 100;
             }
         },
         {
@@ -48,6 +47,64 @@ function Script_init_perks() {
                     global.slash_range = Object_player_meele.slash_range_max;
                 }
             }
-        }
+        },
+		{
+		    title: "Pequena companheira",
+		    description: "Invoque uma pequena companheira de batalha que ajudara matar os monstros",
+		    allowed_characters: ["Ranged"],
+		    condition: function() {
+		        return !instance_exists(Object_fairy);
+		    },
+		    effect: function() {
+		        var _player = instance_find(Object_player, 0);
+
+		        if (_player != noone) {
+		            var _fairy = instance_create_layer(
+		                _player.x,
+		                _player.y,
+		                "Instances",
+		                Object_fairy
+		            );
+					global.fairy_exist = true;
+		            _fairy.target = _player.id;
+		        }
+		    }
+		},
+		{
+		    title: "melhorar companheira",
+		    description: "Aumente o dano da sua pequena companheira de batalha",
+		    allowed_characters: ["Ranged"],
+		    condition: function() {
+		        return instance_exists(Object_fairy);
+		    },
+		    effect: function() {
+		        var _fairy = instance_find(Object_fairy, 0);
+		        if (_fairy != noone) {
+		            _fairy._damage += _fairy._damage * 0.5;
+		        }
+		    }
+		},
+		{
+			title: "O poder da tempestade",
+			description: "Altere o tipo de magia lançada por um raio que atinge outros inimigos",
+			allowed_characters: ["Ranged"],
+			condition: function() {
+		        return Object_player_ranged.currently_weapon == mage_weapon.normal && Object_player.level >= 5;
+		    },
+			effect: function(){
+				Object_player_ranged.currently_weapon = mage_weapon.thunder
+			}
+		},
+		{
+			title: "O poder do gelo",
+			description: "Altere o tipo de magia lançada pora um raio de gelo que congela os inimigos",
+			allowed_characters: ["Ranged"],
+			condition: function() {
+		        return Object_player_ranged.currently_weapon == mage_weapon.normal;
+		    },
+			effect: function(){
+				Object_player_ranged.currently_weapon = mage_weapon.ice;
+			}
+		}
     ];
 }

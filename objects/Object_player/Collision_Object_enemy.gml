@@ -1,3 +1,6 @@
+if(dash_started == true) return;
+
+
 var _dir = point_direction(other.x, other.y, x, y);
 
 knockback_x = lengthdir_x(_impact_force, _dir);

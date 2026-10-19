@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Script_fairy_attack",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Script_fairy_attack",
+  "parent":{
+    "name":"perks_functions",
+    "path":"folders/Scripts/perks_scripts/perks_functions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

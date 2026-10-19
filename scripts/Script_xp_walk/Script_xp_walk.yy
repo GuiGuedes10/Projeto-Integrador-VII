@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Script_xp_walk",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Script_xp_walk",
+  "parent":{
+    "name":"game_scripts",
+    "path":"folders/Scripts/game_scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

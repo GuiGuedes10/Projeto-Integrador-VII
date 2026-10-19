@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"Script_attack_meele",
   "parent":{
-    "name":"player_scripts",
-    "path":"folders/Scripts/player_scripts.yy",
+    "name":"attacks_",
+    "path":"folders/Scripts/player_scripts/meele_/attacks_.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

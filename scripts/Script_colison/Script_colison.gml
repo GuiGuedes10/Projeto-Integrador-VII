@@ -1,17 +1,30 @@
+
 function Script_colison(_hspd, _vspd, _collision_obj) {
+    var _collided = false;
+
     if (place_meeting(x + _hspd, y, _collision_obj)) {
-        while (!place_meeting(x + sign(_hspd), y, _collision_obj)) {
-            x += sign(_hspd);
+        _collided = true;
+
+        var _step_x = sign(_hspd);
+
+        while (_step_x != 0 && !place_meeting(x + _step_x, y, _collision_obj)) {
+            x += _step_x;
         }
-        _hspd = 0;
+    } else {
+        x += _hspd;
     }
-    x += _hspd;
 
     if (place_meeting(x, y + _vspd, _collision_obj)) {
-        while (!place_meeting(x, y + sign(_vspd), _collision_obj)) {
-            y += sign(_vspd);
+        _collided = true;
+
+        var _step_y = sign(_vspd);
+
+        while (_step_y != 0 && !place_meeting(x, y + _step_y, _collision_obj)) {
+            y += _step_y;
         }
-        _vspd = 0;
+    } else {
+        y += _vspd;
     }
-    y += _vspd;
+
+    return _collided;
 }

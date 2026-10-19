@@ -4,16 +4,7 @@ if (!variable_global_exists("perk_list")) {
     Script_init_perks();
 }
 
-var _available = [];
-var _current_char = global.current_character; 
-
-for (var _i = 0; _i < array_length(global.perk_list); _i++) {
-    var _perk = global.perk_list[_i]; 
-    
-    if (array_contains(_perk.allowed_characters, "all") || array_contains(_perk.allowed_characters, _current_char)) {
-        array_push(_available, _perk);
-    }
-}
+var _available = Script_get_available_perks();
 
 _available = array_shuffle(_available);
 
@@ -26,4 +17,4 @@ for (var i = 0; i < _max_options; i++) {
 
 index_selecionado = 0;
 cooldown = 0;
-_timer = 10
+_timer = 10;

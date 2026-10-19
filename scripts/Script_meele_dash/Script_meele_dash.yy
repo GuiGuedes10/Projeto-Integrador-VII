@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Script_meele_dash",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Script_meele_dash",
+  "parent":{
+    "name":"meele_",
+    "path":"folders/Scripts/player_scripts/meele_.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

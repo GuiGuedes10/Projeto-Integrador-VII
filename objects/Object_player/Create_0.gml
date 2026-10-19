@@ -1,7 +1,7 @@
 enum state{
 idle,
 walk,
-dead
+dead,
 }
 
 currently_state = state.idle;
@@ -12,9 +12,21 @@ level = 1;
 xp = 0;
 attack_cooldown = 0;
 _cooldown = 15;
+dash_range = 100
+dash_cooldown = 0
+dash_cooldown_max = 60
+dash_started = false
 
 
 _impact_force = 8; 
 knockback_x = 0;
 knockback_y = 0;
 knockback_friction = 0.1;
+
+dash_circle = instance_create_layer(
+    x, y,
+    layer,
+    Object_circle
+);
+
+dash_circle.target = id;

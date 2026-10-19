@@ -31,7 +31,7 @@
   "origin":4,
   "parent":{
     "name":"player_attack_",
-    "path":"folders/Sprites/game/player_attack_.yy",
+    "path":"folders/Sprites/characters/player_attack_.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

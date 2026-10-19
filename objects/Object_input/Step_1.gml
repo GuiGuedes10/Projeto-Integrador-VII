@@ -8,6 +8,7 @@ if (global.bot_mode == "DESLIGADO") {
     input_top = keyboard_check(ord("W"));
     input_down = keyboard_check(ord("S"));
     input_mb_left = mouse_check_button(mb_left);
+	input_shift = keyboard_check(vk_shift);
     input_confirm = keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space);
 } 
 else {

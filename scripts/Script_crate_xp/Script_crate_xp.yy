@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Script_crate_xp",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Script_crate_xp",
+  "parent":{
+    "name":"game_scripts",
+    "path":"folders/Scripts/game_scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

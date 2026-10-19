@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Script_chain_lightning",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Script_chain_lightning",
+  "parent":{
+    "name":"attacks_",
+    "path":"folders/Scripts/player_scripts/ranged_/attacks_.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

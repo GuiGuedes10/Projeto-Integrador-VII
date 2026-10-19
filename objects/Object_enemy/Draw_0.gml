@@ -20,3 +20,11 @@ draw_set_color(c_red);
 draw_rectangle(_bar_x, _bar_y, _bar_x + _current_width, _bar_y + _bar_height, false);
 
 draw_set_color(c_white);
+
+if (flash_timer > 0) {
+    gpu_set_fog(true, c_white, 0, 0);
+    draw_self();
+    gpu_set_fog(false, c_white, 0, 0);
+} else {
+    draw_self();
+}

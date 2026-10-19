@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"Script_attack_ranged",
   "parent":{
-    "name":"player_scripts",
-    "path":"folders/Scripts/player_scripts.yy",
+    "name":"attacks_",
+    "path":"folders/Scripts/player_scripts/ranged_/attacks_.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
