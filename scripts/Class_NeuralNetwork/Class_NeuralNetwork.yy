@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Class_NeuralNetwork",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Class_NeuralNetwork",
+  "parent":{
+    "name":"ia_player",
+    "path":"folders/Scripts/ia_player.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

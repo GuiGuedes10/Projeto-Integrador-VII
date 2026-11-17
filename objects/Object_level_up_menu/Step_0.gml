@@ -6,6 +6,7 @@ if(global.bot_mode != "DESLIGADO"){
 	options[index_selecionado].effect();
     global.game_paused = false;
     instance_destroy();
+    exit;
 }
 
 if (cooldown <= 0) {
@@ -26,4 +27,5 @@ if (Object_input.input_confirm) {
     options[index_selecionado].effect();
     global.game_paused = false;
     instance_destroy();
+    exit;
 }

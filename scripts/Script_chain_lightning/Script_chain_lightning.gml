@@ -5,7 +5,7 @@ function Script_chain_lightning(_first_enemy, _jumps, _range) {
     var _damage = global.bullet_damage * 0.5; 
     
     if (variable_instance_exists(_first_enemy, "life")) {
-        _first_enemy.life -= _damage;
+        Script_enemy_take_damage(_first_enemy, _damage);
     }
     
     var _current_target = _first_enemy;
@@ -34,7 +34,7 @@ function Script_chain_lightning(_first_enemy, _jumps, _range) {
             _effect.y2 = _nearest_enemy.y;
 
             if (variable_instance_exists(_nearest_enemy, "life")) {
-                _nearest_enemy.life -= _damage;
+                Script_enemy_take_damage(_nearest_enemy, _damage);
             }
             
             array_push(_hit_enemies, _nearest_enemy);

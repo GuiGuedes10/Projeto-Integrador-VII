@@ -30,3 +30,21 @@ dash_circle = instance_create_layer(
 );
 
 dash_circle.target = id;
+// Fonte dos comandos usados pelo personagem.
+player_input = Object_input;
+
+total_damage_dealt = 0;
+total_damage_taken = 0;
+total_kills = 0;
+total_xp_collected = 0;
+total_xp_pickups = 0;
+death_processed = false;
+aim_direction = 0;
+dash_direction = 0;
+
+ai_mode_at_start = global.player_ai_training ? "TREINAMENTO" : "AVALIACAO";
+ai_mode_changed = false;
+
+total_healing_received = 0;
+total_potions_collected = 0;
+total_levels_gained = 0;

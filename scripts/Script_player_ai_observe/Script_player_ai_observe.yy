@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Script_player_ai_observe",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Script_player_ai_observe",
+  "parent":{
+    "name":"ia_player",
+    "path":"folders/Scripts/ia_player.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

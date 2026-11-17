@@ -1,1 +1,1 @@
-life -= other.demage
+Script_enemy_take_damage(id, other.demage);

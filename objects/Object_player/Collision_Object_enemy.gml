@@ -1,4 +1,4 @@
-if(dash_started == true) return;
+if (global.game_paused || life <= 0 || other.life <= 0 || dash_started) exit;
 
 
 var _dir = point_direction(other.x, other.y, x, y);
@@ -6,7 +6,9 @@ var _dir = point_direction(other.x, other.y, x, y);
 knockback_x = lengthdir_x(_impact_force, _dir);
 knockback_y = lengthdir_y(_impact_force, _dir);
 
-life -= other.strength;
+var _actual_damage = min(life, max(0, other.strength));
+life -= _actual_damage;
+total_damage_taken += _actual_damage;
 
 if(currently_state != state.dead){
 	if (life <= max_life * 0.8) {

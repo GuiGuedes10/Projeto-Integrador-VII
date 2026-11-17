@@ -8,7 +8,8 @@ function Script_update_q_table(old_state, current_state, action, old_hp, current
 	var _hp_percent = current_hp / Object_player.max_life;
 	var _state_hp = (_hp_percent > 0.7) ? "HIGH" : ((_hp_percent > 0.3) ? "MED" : "LOW");
 
-	if (action == 0 && _state_hp != "LOW") _reward -= 8; 
+	if (action == 0 && _state_hp != "LOW") _reward -= 10; 
+	if (action == 0 && _state_hp != "HIGH") _reward -= 30; 
 	if (_state_hp == "HIGH" && (action == 0 || action == 1)) _reward -= 5;
 
 	if (Object_player.currently_state == state.dead || current_hp <= 0) _reward += 150;
@@ -16,7 +17,7 @@ function Script_update_q_table(old_state, current_state, action, old_hp, current
 	var _action_costs = [0, 2, 4, 4, 7, 10]; 
 	_reward -= _action_costs[action];
 
-	if (_enemy_count >= max_enemies && action > 0) _reward -= 15; 
+	if (_enemy_count >= global.max_enemies && action > 0) _reward -= 15; 
 
 	if (!variable_struct_exists(q_table, current_state)) {
 	    variable_struct_set(q_table, current_state, [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]);

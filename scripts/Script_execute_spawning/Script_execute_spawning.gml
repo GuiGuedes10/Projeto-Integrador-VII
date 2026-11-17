@@ -41,7 +41,7 @@ function Script_execute_spawning(action_chosen){
 	        _formation = "FRENTE";
 	        break;
 	    case 5: 
-	        _spawn_amount = max_enemies;
+	        _spawn_amount = global.max_enemies;
 	        _enemy_hp = 60;
 	        _enemy_spd = 1.6;
 	        _enemy_dmg = 10;
@@ -49,8 +49,8 @@ function Script_execute_spawning(action_chosen){
 	        break;
 	}
 
-	if (_enemy_count + _spawn_amount > max_enemies) {
-	    _spawn_amount = max(0, max_enemies - _enemy_count);
+	if (_enemy_count + _spawn_amount > global.max_enemies) {
+	    _spawn_amount = max(0, global.max_enemies - _enemy_count);
 	}
 
 	var _base_direction = random(360); 

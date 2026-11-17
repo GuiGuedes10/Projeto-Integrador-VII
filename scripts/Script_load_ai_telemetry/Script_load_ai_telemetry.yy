@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Script_load_ai_telemetry",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Script_load_ai_telemetry",
+  "parent":{
+    "name":"IA_scripts",
+    "path":"folders/Scripts/game_scripts/IA_scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

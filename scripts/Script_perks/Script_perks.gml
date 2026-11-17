@@ -12,7 +12,7 @@ function Script_init_perks() {
         {
             title: "Injeção de Adrenalina",
             description: "+100 de Vida Máxima",
-            allowed_characters: ["all"], 
+            allowed_characters: "all", 
             effect: function() {
                 Object_player.max_life += 100;
             }
@@ -20,7 +20,7 @@ function Script_init_perks() {
         {
             title: "Botas da velocidade",
             description: "Aumente sua velocidade em 10%",
-            allowed_characters: ["all"], 
+            allowed_characters: "all", 
             effect: function() {
                 Object_player.player_speed += Object_player.player_speed * 0.1;
             }

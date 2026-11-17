@@ -18,3 +18,8 @@ for (var i = 0; i < _max_options; i++) {
 index_selecionado = 0;
 cooldown = 0;
 _timer = 10;
+if (array_length(options) == 0) {
+    global.game_paused = false;
+    instance_destroy();
+    exit;
+}

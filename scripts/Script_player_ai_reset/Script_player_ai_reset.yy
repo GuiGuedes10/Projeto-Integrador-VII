@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Script_player_ai_reset",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Script_player_ai_reset",
+  "parent":{
+    "name":"ia_player",
+    "path":"folders/Scripts/ia_player.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

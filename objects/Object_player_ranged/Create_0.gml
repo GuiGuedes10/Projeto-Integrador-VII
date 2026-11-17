@@ -6,7 +6,7 @@ thunder,
 ice
 }
 
-currently_weapon = mage_weapon.ice
+currently_weapon = mage_weapon.normal
 
 global.bullet_damage = 50;
 

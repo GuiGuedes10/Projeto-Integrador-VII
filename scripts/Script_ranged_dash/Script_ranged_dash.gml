@@ -4,7 +4,7 @@ function Script_ranged_dash() {
     dash_cooldown = 15;
     dash_started = true;
 
-    var _dir = point_direction(x, y, mouse_x, mouse_y);
+    var _dir = dash_direction;
     var _distance = dash_range;
     var _steps = ceil(dash_range);
 

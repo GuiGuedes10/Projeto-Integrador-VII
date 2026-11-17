@@ -4,7 +4,7 @@ function Script_get_game_state(){
 	var _state_hp = (_hp_percent > 0.7) ? "HIGH" : ((_hp_percent > 0.3) ? "MED" : "LOW");
 
 	var _enemy_count = instance_number(Object_enemy);
-	var _state_enemies = (_enemy_count >= Object_game_director.max_enemies) ? "FULL" : ((_enemy_count > 15) ? "HIGH" : ((_enemy_count > 5) ? "MED" : "LOW"));
+	var _state_enemies = (_enemy_count >= global.max_enemies) ? "FULL" : ((_enemy_count > 15) ? "HIGH" : ((_enemy_count > 5) ? "MED" : "LOW"));
 
 	var _player_type = "MELEE"; 
 	if (Object_player.object_index != Object_player_meele) {

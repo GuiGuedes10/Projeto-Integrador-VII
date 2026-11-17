@@ -1,5 +1,5 @@
 function Script_crate_xp(enemy_x, enemy_y){
-	var _amount = irandom_range(5, 15);
+	var _amount = irandom_range(1, 8);
 	var _range
 	for(i = 0; i <= _amount; i++){
 		_range = irandom(5);

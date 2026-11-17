@@ -3,8 +3,8 @@ function Script_attack_meele() {
         attack_cooldown--;
     }
 
-    if (attack_cooldown <= 0 && Object_input.input_mb_left) {
-        var _dir = point_direction(x, y, mouse_x, mouse_y);
+    if (attack_cooldown <= 0 && player_input.input_mb_left) {
+        var _dir = aim_direction;
         
         var _dist = 24; 
         

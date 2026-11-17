@@ -8,7 +8,7 @@ function Script_meele_dash() {
         begin_x = x;
         begin_y = y;
 
-        var _dir = point_direction(x, y, mouse_x, mouse_y);
+        var _dir = dash_direction;
 
         dash_target_x = x + lengthdir_x(dash_range, _dir);
         dash_target_y = y + lengthdir_y(dash_range, _dir);

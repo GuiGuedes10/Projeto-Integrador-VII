@@ -1,0 +1,12 @@
+input_left = false;
+input_right = false;
+input_top = false;
+input_down = false;
+input_mb_left = false;
+input_shift = false;
+input_confirm = false;
+player_walk = false;
+input_toggle_bot = false;
+input_toggle_ai_training = false;
+input_aim_x = mouse_x;
+input_aim_y = mouse_y;

@@ -3,7 +3,8 @@ function Script_level_up(){
 
 	if (xp >= _xp_needed) {
 	    xp -= _xp_needed; 
-	    level++;          
+	    level++;
+        total_levels_gained++;          
 		instance_create_layer(0, 0, "Instances", Object_level_up_menu);
 	}
 }
