@@ -1,8 +1,8 @@
 function Script_init_perks() {
     global.perk_list = [
         {
-            title: "Pente Expandido",
-            description: "+2 Balas na capacidade do pente",
+            title: "Aprendizado",
+            description: "+2 Magias de capacidade",
             allowed_characters: ["Ranged"],
             effect: function() {
                 Object_player.max_bullet += 2;
@@ -26,7 +26,7 @@ function Script_init_perks() {
             }
         },
         {
-            title: "Melhorar munição",
+            title: "Melhorar magia",
             description: "Aumente seu dano em 10%",
             allowed_characters: ["Ranged"],
             effect: function() {
@@ -100,7 +100,7 @@ function Script_init_perks() {
 			description: "Altere o tipo de magia lançada pora um raio de gelo que congela os inimigos",
 			allowed_characters: ["Ranged"],
 			condition: function() {
-		        return Object_player_ranged.currently_weapon == mage_weapon.normal;
+		        return Object_player_ranged.currently_weapon == mage_weapon.normal && Object_player.level >= 5;
 		    },
 			effect: function(){
 				Object_player_ranged.currently_weapon = mage_weapon.ice;

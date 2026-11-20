@@ -19,3 +19,7 @@ knockback_friction = 0.1;
 
 previous_life = life;
 flash_timer = 0;
+
+instance_create_layer(x, y, layer, Object_shadow, {
+    target: id
+});

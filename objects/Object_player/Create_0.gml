@@ -17,7 +17,6 @@ dash_cooldown = 0
 dash_cooldown_max = 60
 dash_started = false
 
-
 _impact_force = 8; 
 knockback_x = 0;
 knockback_y = 0;
@@ -48,3 +47,7 @@ ai_mode_changed = false;
 total_healing_received = 0;
 total_potions_collected = 0;
 total_levels_gained = 0;
+
+instance_create_layer(x, y, layer, Object_shadow, {
+    target: id
+});

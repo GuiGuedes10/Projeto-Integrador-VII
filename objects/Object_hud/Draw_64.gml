@@ -73,8 +73,7 @@ if (_player != noone) {
         for (var _i = 0; _i < _player.bullet_current; _i++) {
             var _draw_x = _ammo_start_x + (_i * (_ammo_width + _ammo_padding));
 
-            var _ammo_cicle = (current_time + ammo_offset[_i]) % ammo_cycle_speed[_i];
-            var _ammo_frame = (_ammo_cicle < 600) ? floor(_ammo_cicle / 200) : 0;
+            var _ammo_frame = floor(ammo_animation_frame);
 
             draw_sprite(Sprite_bullet_hud, _ammo_frame, _draw_x, _ammo_start_y);
         }

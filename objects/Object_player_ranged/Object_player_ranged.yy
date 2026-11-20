@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"player_sprite",
-    "path":"sprites/player_sprite/player_sprite.yy",
+    "name":"Sprite_ragend_idle",
+    "path":"sprites/Sprite_ragend_idle/Sprite_ragend_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,
