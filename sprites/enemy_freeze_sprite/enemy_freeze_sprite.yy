@@ -3,8 +3,8 @@
   "%Name":"enemy_freeze_sprite",
   "bboxMode":0,
   "bbox_bottom":31,
-  "bbox_left":7,
-  "bbox_right":24,
+  "bbox_left":1,
+  "bbox_right":31,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"8bfefa35-03a8-4ebb-8533-ddee321fe843","name":"8bfefa35-03a8-4ebb-8533-ddee321fe843","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c09e6779-0c13-4fcc-949c-ef3ee55099d1","name":"c09e6779-0c13-4fcc-949c-ef3ee55099d1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":32,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"5fcadefc-0999-4725-ace7-f3b6c37730d6","blendMode":0,"displayName":"default","isLocked":false,"name":"5fcadefc-0999-4725-ace7-f3b6c37730d6","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"46916964-468f-4844-a95e-8313428b4a48","blendMode":0,"displayName":"default","isLocked":false,"name":"46916964-468f-4844-a95e-8313428b4a48","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"enemy_freeze_sprite",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8bfefa35-03a8-4ebb-8533-ddee321fe843","path":"sprites/enemy_freeze_sprite/enemy_freeze_sprite.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3fa859be-53ad-444f-9418-cb44309d4575","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c09e6779-0c13-4fcc-949c-ef3ee55099d1","path":"sprites/enemy_freeze_sprite/enemy_freeze_sprite.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"00311281-4b93-4c51-bbfa-15425acd7f7e","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
